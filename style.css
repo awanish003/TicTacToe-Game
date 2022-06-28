@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: rgb(102, 1, 102);
+    color: white;
+    height: 58px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+
+}
+
+nav ul {
+    list-style: none;
+    margin: 5px;
+    padding: 6px;
+}
+
+.gamecontainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.container {
+    display: grid;
+    position: relative;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.box {
+    border: 2px solid black;
+    font-size: 8vw;
+    display: flex;
+    justify-content: center;
+}
+
+.box:hover {
+    background-color: paleturquoise;
+    cursor: pointer;
+}
+
+
+.gameinfo {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px 34px;
+}
+
+.imgbox img {
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.br-0 {
+    border-right: 0;
+}
+
+.bl-0 {
+    border-left: 0;
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+#reset {
+    width: 7vw;
+    height: 5vh;
+    margin: 9px 18px;
+    border-radius: 8px;
+    background-color: #f1bff1;
+    border: none;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+}
+
+.info {
+    font-size: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serifs;
+}
+
+.line{
+    background-color: rgb(180, 2, 240);
+    width: 0vw;
+    height: 3px;
+    transition: width 1s ease;
+    position: absolute;
+}
+
+@media screen and (max-width: 1200px) {
+    .gamecontainer {
+        flex-wrap: wrap;
+    }
+
+    .gameinfo {
+        margin-top: 20px;
+    }
+
+    .gameinfo h3 {
+        font-size: 1.5rem;
+    }
+
+    #reset {
+        width: 25vw;
+        height: 9vh;
+    }
+
+    .container {
+        display: grid;
+        grid-template-rows: repeat(3, 17vw);
+        grid-template-columns: repeat(3, 17vw);
+        font-family: 'Courier New', Courier, monospace;
+
+    }
+}
